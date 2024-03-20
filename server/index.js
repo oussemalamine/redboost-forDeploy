@@ -22,7 +22,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(
   cors({
-    origin: "http://localhost:5173", // Allow the client app to access the server
+    origin: "https://kaleidoscopic-longma-44dbd6.netlify.app", // Allow the client app to access the server
     credentials: true, // Allow cookies/session to be sent from the client
   })
 );
