@@ -18,7 +18,7 @@ app.use(express.json());
 // Enable CORS
 app.use(
   cors({
-    origin: "http://localhost:5173", // Allow the client app to access the server
+    origin: "https://kaleidoscopic-longma-44dbd6.netlify.app", // Allow the client app to access the server
     credentials: true, // Allow cookies/session to be sent from the client
   })
 );
@@ -29,7 +29,7 @@ app.use(
     resave: false,
     saveUninitialized: false, // Don't create session until something stored
     cookie: {
-      secure: false, // Requires https
+      secure: true, // Requires https
       httpOnly: true, // Prevents client side JS from reading the cookie
       maxAge: 1000 * 60 * 60 * 24, // Cookie will live for 24H
     },
